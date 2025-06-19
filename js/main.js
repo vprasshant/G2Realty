@@ -53,7 +53,7 @@
         dots: false,
         loop: true,
         margin: 25,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-arrow-right"></i>',
             '<i class="fa fa-arrow-left"></i>'
@@ -107,6 +107,39 @@
             },
             1200:{
                 items:2
+            }
+        }
+    });
+
+    // Services carousel
+    $(".services-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        center: false,
+        dots: false,
+        loop: true,
+        margin: 25,
+        nav : true,
+        navText : [
+            '<i class="fa fa-arrow-right"></i>',
+            '<i class="fa fa-arrow-left"></i>'
+        ],
+        responsiveClass: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
             }
         }
     });

@@ -366,12 +366,39 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/bg-breadcrumb.jpg);
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0 60px 0;
     transition: 0.5s;
+}
+.aboutbg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/aboutbanner.jpg) no-repeat center center / cover;
+}
+
+.servicebg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/servicebanner.jpg) no-repeat center center / cover;
+}
+
+.conatactbg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/contactbanner.jpg) no-repeat center center / cover;
+}
+
+.faqbg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/faqbanner.jpg) no-repeat center center / cover;
+}
+
+.testimonialbg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/testimonialsbanner.jpg) no-repeat top center / cover;
+}
+
+.gallerybg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/gallerybanner.jpg) no-repeat center center / cover;
+}
+
+.dealsbg {
+    background: linear-gradient(rgba(1, 95, 201, 0.9), rgba(0, 0, 0, 0.2)), url(../img/dealsbanner.jpg) no-repeat center center / cover;
 }
 
 .bg-breadcrumb .breadcrumb {
@@ -390,7 +417,9 @@
     background: var(--bs-white);
     transition: 0.5s;
 }
-
+.breadcrumb-item.active {
+    color: #ffdb0c;
+}
 .feature .feature-item:hover {
     filter: drop-shadow(2px 4px 6px #e9e9e9);
         transform: scale(1.02);
@@ -430,7 +459,8 @@
     height: 100%;
 }
 
-.feature .feature-item .feature-icon {
+.feature .feature-item .feature-icon,
+.icon {
     color: var(--greencolor);
 }
 
@@ -458,6 +488,13 @@ background: var(--altcolor);
 
 
 /*** Service Start ***/
+.serviceimg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 2rem;
+}
 .service .service-item {
     border-radius: 10px;
 }
@@ -531,7 +568,7 @@ background: var(--altcolor);
     position: relative;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--bs-light);
+    background: #f4f4f4;
     min-height: 220px;
 }
 
@@ -599,6 +636,10 @@ background: var(--altcolor);
 
 
 /*** Blog Start ***/
+.sold {
+    background-color: rgb(249, 175, 2) !important;
+    color: #000 !important;
+}
 .blog .blog-item {
     border-radius: 10px;
     transition: 0.5s;
@@ -621,10 +662,11 @@ background: var(--altcolor);
 
 .blog .blog-item .blog-img img {
     transition: 0.5s;
+    transform: scale(1.3);
 }
 
 .blog .blog-item:hover .blog-img img {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .blog .blog-item .blog-img::after {
@@ -659,7 +701,7 @@ background: var(--altcolor);
 .blog .blog-item .blog-content {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--bs-light);
+    background: var(--bs-white);
 }
 
 .blog .blog-item .blog-content a.btn {
@@ -743,7 +785,8 @@ background: var(--altcolor);
     margin-right: -1px;
 }
 
-.testimonial .owl-nav .owl-prev {
+.testimonial .owl-nav .owl-prev,
+.service .owl-nav>.owl-prev {
     position: absolute;
     top: -58px;
     left: 0;
@@ -754,12 +797,14 @@ background: var(--altcolor);
     transition: 0.5s;
 }
 
-.testimonial .owl-nav .owl-prev:hover {
+.testimonial .owl-nav .owl-prev:hover,
+.service .owl-nav>.owl-prev:hover {
     background: var(--altcolor);
     color: var(--maincolor);
 }
 
-.testimonial .owl-nav .owl-next {
+.testimonial .owl-nav .owl-next,
+.service .owl-nav>.owl-next {
     position: absolute;
     top: -58px;
     right: 0;
@@ -770,7 +815,8 @@ background: var(--altcolor);
     transition: 0.5s;
 }
 
-.testimonial .owl-nav .owl-next:hover {
+.testimonial .owl-nav .owl-next:hover,
+.service .owl-nav>.owl-next:hover {
     background: var(--altcolor);
         color: var(--maincolor);
 }
@@ -830,13 +876,14 @@ background: var(--altcolor);
 }
 
 .footer .footer-item a {
-    line-height: 35px;
+    line-height: 28px;
     color: var(--bs-white);
     transition: 0.5s;
 }
 
 .footer .footer-item p {
-    line-height: 35px;
+    line-height: 28px;
+        color: #f7f7f7;
 }
 
 .footer .footer-item a:hover {
