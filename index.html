@@ -91,6 +91,7 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About Us</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="team.html" class="nav-item nav-link">Our Team</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                 <span class="dropdown-toggle">Services</span>
@@ -129,18 +130,18 @@
     <!-- Navbar & Hero End -->
 
     <!-- Modal Search Start -->
+    <!-- Query Form Modal -->
     <div class="modal fade" id="QueryForm" tabindex="-1" role="dialog" aria-labelledby="QueryFormLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="QueryFormLabel">Get a Free Quote</h5>
-                    <button type="button" class="bg-primary btn text-white" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-light">
                     <div>
                         <h4 class="text-primary">Send Your Message</h4>
-                
-                        <form>
+                        <form id="query-form">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -156,20 +157,31 @@
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="phone" class="form-control border-1" id="phone" placeholder="Phone">
+                                        <input type="tel" class="form-control border-1" id="phone" placeholder="Phone">
                                         <label for="phone">Your Phone</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-1" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
+                                        <input type="text" class="form-control border-1" id="city" placeholder="City" readonly>
+                                        <label for="city">City</label>
+                                        </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Appraisal Type:</label>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="appraisal" id="sale-appraisal" value="Sale Appraisal">
+                                                <label class="form-check-label" for="sale-appraisal">Sale Appraisal</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="appraisal" id="rent-appraisal" value="Rent Appraisal">
+                                                <label class="form-check-label" for="rent-appraisal">Rent Appraisal</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-1" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control border-1" id="subject" placeholder="Subject" readonly>
+                                        <label for="subject">Address</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -178,19 +190,17 @@
                                             style="height: 120px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
-                
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                    <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                
-                </div>
-                </div>
-                </div>
+            </div>
+            </div>
+            </div>
                 </div>
                 </div>
     </div>
@@ -198,151 +208,135 @@
 
 
     <!-- Carousel Start -->
-    <div class="header-carousel owl-carousel">
-        <div class="header-carousel-item bg-primary">
-            <div class="carousel-caption">
-                <div class="container">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-7 animated fadeInLeft">
-                            <div class="text-sm-center text-md-start">
-                                <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To G2Realty</h4>
-                                <h1 class="display-1 text-white mb-4">Find Your Dream Home with Expert Guidance</h1>
-                                <p class="mb-5 fs-5">Discover your dream home with expert guidance, tailored property
-                                    options, and trusted support to
-                                    make every step simple
-                                    and stress-free...
-                                </p>
-                                <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" data-bs-toggle="modal" data-bs-target="#QueryForm">
-                                        <i class="fa fa-calendar  fa-1x  me-1"></i> Book a Free Consultation</a>
-                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="about.html">Read
-                                        More</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0 position-relative">
+                <video src="img/v4.mp4" loop muted autoplay width="100%" height="450px" style="object-fit: cover;"> </video>
+                <div class="bannerbox">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-12 h-100">
+                                <div class="my-5">
+                                    <h1 class="text-white fw-bold display-5">Unlock Your Property’s True Value</h1>
+                                    <h3 class="text-white">Get an Instant Estimate</h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 animated fadeInRight">
-                            <div class="calrousel-img" style="object-fit: cover;">
-                                <img src="img/carousel-2.png" class="img-fluid w-100" alt="">
+                                <div class="searchbox-container">
+                                    <form id="search-form">
+                                        <div class="radio-buttons">
+                                            <input type="radio" id="sale" name="property-type" value="Sale" checked>
+                                            <label for="sale">Sale</label>
+                                            <input type="radio" id="rent" name="property-type" value="Rent">
+                                            <label for="rent">Rent</label>
+                                        </div>
+                                        <div class="search-input-container">
+                                            <input type="text" id="address" list="address-list" placeholder="Search property by address" required>
+                                            <datalist id="address-list">
+                                                <option value="Sydney, New South Wales">
+                                                <option value="Newcastle, New South Wales">
+                                                <option value="Wollongong, New South Wales">
+                                                <option value="Maitland, New South Wales">
+                                                <option value="Wagga Wagga, New South Wales">
+                                                <option value="Albury, New South Wales">
+                                                <option value="Coffs Harbour, New South Wales">
+                                                <option value="Dubbo, New South Wales">
+                                                <option value="Melbourne, Victoria">
+                                                <option value="Geelong, Victoria">
+                                                <option value="Ballarat, Victoria">
+                                                <option value="Bendigo, Victoria">
+                                                <option value="Shepparton, Victoria">
+                                                <option value="Wodonga, Victoria">
+                                                <option value="Mildura, Victoria">
+                                                <option value="Warrnambool, Victoria">
+                                                <option value="Brisbane, Queensland">
+                                                <option value="Gold Coast, Queensland">
+                                                <option value="Sunshine Coast, Queensland">
+                                                <option value="Townsville, Queensland">
+                                                <option value="Cairns, Queensland">
+                                                <option value="Toowoomba, Queensland">
+                                                <option value="Mackay, Queensland">
+                                                <option value="Rockhampton, Queensland">
+                                                <option value="Adelaide, South Australia">
+                                                <option value="Mount Gambier, South Australia">
+                                                <option value="Whyalla, South Australia">
+                                                <option value="Murray Bridge, South Australia">
+                                                <option value="Port Augusta, South Australia">
+                                                <option value="Port Pirie, South Australia">
+                                                <option value="Victor Harbor, South Australia">
+                                                <option value="Port Lincoln, South Australia">
+                                                <option value="Perth, Western Australia">
+                                                <option value="Bunbury, Western Australia">
+                                                <option value="Geraldton, Western Australia">
+                                                <option value="Kalgoorlie-Boulder, Western Australia">
+                                                <option value="Albany, Western Australia">
+                                                <option value="Broome, Western Australia">
+                                                <option value="Port Hedland, Western Australia">
+                                                <option value="Karratha, Western Australia">
+                                                <option value="Hobart, Tasmania">
+                                                <option value="Launceston, Tasmania">
+                                                <option value="Devonport, Tasmania">
+                                                <option value="Burnie, Tasmania">
+                                                <option value="Canberra, Australian Capital Territory">
+                                                <option value="Darwin, Northern airport">
+                                                <option value="Alice Springs, Northern airport">
+                                                <option value="Palmerston, Northern airport">
+                                                <option value="Katherine, Northern airport">
+                                            </datalist>
+                                            <button type="button" class="btn btn-primary" id="submit-btn" data-bs-toggle="modal"
+                                                data-bs-target="#QueryForm">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="header-carousel-item bg-primary">
-            <div class="carousel-caption">
-                <div class="container">
-                    <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
-                        <div class="col-lg-5 animated fadeInLeft">
-                            <div class="calrousel-img">
-                                <img src="img/carousel-2.png" class="img-fluid w-100" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-7 animated fadeInRight">
-                            <div class="text-sm-center text-md-end">
-                                <h4 class="text-white text-uppercase fw-bold mb-4">Welcome To G2Realty</h4>
-                                <h1 class="display-1 text-white mb-4">Discover Your Perfect Home with Trusted Experts
-                                </h1>
-                                <p class="mb-5 fs-5">Find your ideal home with trusted experts who offer personalized
-                                    guidance, local knowledge, and
-                                    support every step of
-                                    the way...
-                                </p>
-                                <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                    <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" data-bs-toggle="modal" data-bs-target="#QueryForm">
-                                        <i class="fa fa-calendar fa-1x me-1"></i> Book a Free Consultation
-                                    </a>
-                                    <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="about.html">Read
-                                        More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
         </div>
     </div>
     <!-- Carousel End -->
 
     <!-- Feature Start -->
-    <div class="container-fluid feature bg-light pt-5">
+    <div class="container-fluid feature bg-light">
         <div class="container py-5">
             <!-- About Start -->
             <div class="row g-5">
                 <div class="col-xl-12 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="about-item-content bg-white rounded p-5 h-100">
                         <div class="row">
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="col-12">
                                 <h4 class="text-primary">About Our Company</h4>
                                 <h1 class="display-4 mb-4">Experience You Can Trust: The G2 Realty Story</h1>
-                                <p> <span class="alttext">G2 Realty</span> is a dedicated team of property specialists
-                                    committed to making the process
-                                    of
-                                    owning and managing rental
-                                    properties easier and more profitable. The husband-and-wife team, Guru Gill and Jag
-                                    Gill, began their real estate
-                                    journey over 8 years ago. Since then, they have expanded
-                                    their expertise to serve home
-                                    buyers,
-                                    home sellers, and investors through comprehensive property management services.
-                                </p>
-                            </div>
-                            </div>
-                            <div class="row mt-4 ">
-                                <div class="col-md-6 mb-3 wow fadeInUp" data-wow-delay="0.6s">
-                                    <div class=" bg-light rounded py-3 px-4 feature-icon">
-                                        <div class="text-center mt-2">
-                                            <i class="fa fa-handshake fa-3x icon"></i>
-                                        </div>
-                            
-                                        <h4 class="text-dark text-center p-2"> Mission</h4>
-                                        <p>
-                                        At G2 Realty, our mission is to deliver exceptional real estate services
-                                        grounded in integrity,
-                                        transparency, and a
-                                        customer-first approach. We guide our clients through every step of their real
-                                        estate journey—whether
-                                        it’s buying,
-                                        selling, or managing properties—with professionalism and care.
-                                        </p>
-                                    <p>
-                                        By understanding your lifestyle and financial goals, we connect you with
-                                        properties that align with your
-                                        needs and
-                                        vision. Our focus on building lasting relationships and delivering consistent
-                                        results ensures a smooth,
-                                        informed, and
-                                        rewarding real estate experience.
-                                    </p>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3 wow fadeInUp" data-wow-delay="0.8s">
-                                        <div class=" bg-light rounded py-3 px-4 feature-icon">
-                                            <div class="text-center mt-2">
-                                                <i class="fa fa-crosshairs fa-3x icon"></i>
-                                            </div>
-                                    
-                                            <h4 class="text-dark text-center p-2"> Vission</h4>
-                                            <p>
-                                                We envision a future where real estate is not just a transaction, but a journey
-                                                of trust, empowerment,
-                                                and long-term
-                                                value. By leveraging modern tools, personalized guidance, and deep market
-                                                insight, we aim to simplify
-                                                the complex and
-                                                bring clarity to every decision.
-                                            </p>
-                                            <p>
-                                                We believe real estate is more than just a transaction—it’s about building
-                                                lasting relationships and vibrant
-                                                communities. Our goal is to help clients achieve long-term value while
-                                                contributing to the growth of stronger,
-                                                smarter
-                                                neighborhoods for a better tomorrow.
-                                            </p>
-                                        </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12 col-md-5 wow fadeInUp" data-wow-delay="0.4s">
+                                <img src="img/collage_guru_jagdeep.jpg" alt="G2 Realty" class="mw-100">
+                            </div>
+                            <div class="col-12 col-md-7 wow fadeInUp" data-wow-delay="0.4s">
+                            
+                                <p> <span class="alttext">G2 Realty</span> is a dedicated team of property specialists committed to making the process
+                                    of owning and managing rental
+                                    properties easier and more profitable. The husband-and-wife team, Guru Gill and Jag Gill, began their real estate
+                                    journey over 8 years ago. Since then, they have expanded their expertise to serve home buyers, home sellers, and
+                                    investors through comprehensive property management services.
+                                </p>
+                                <p>
+                                    At G2 Realty, we take pride in offering personalized, hands-on service tailored to each client’s unique needs. Whether
+                                    you’re a first-time landlord or a seasoned investor, our end-to-end property management solutions are designed to
+                                    maximize your returns and minimize your stress.
+                                    </p>
+                                    <p>
+                                    From tenant screening and rent collection to maintenance coordination and legal compliance, we handle every aspect with
+                                    professionalism and care. Our deep understanding of the local market ensures that your property is competitively priced,
+                                    well-maintained, and continuously occupied.
+                                    </p>
+                                    <p>
+                                    We believe in building lasting relationships based on trust, transparency, and results. With G2 Realty, you can enjoy
+                                    peace of mind knowing your investment is in expert hands.
+                                    </p>
+                                    </div>
+                            </div>
+                        
                         <div class="row mt-4">
                             <div class="col-12 col-md-12 d-md-flex gap-5 justify-content-md-center align-items-center wow fadeInUp" data-wow-delay="1s">
                                 <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Market-Driven
@@ -365,84 +359,9 @@
 
             <!-- About End -->
 
-            <div class="row mt-5">
-                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="bg-white rounded p-4 h-100">
-                        <div class="row g-4 justify-content-center">
-
-
-                            <div class="col-12">
-                                <img src="img/guru.jpeg" class="img-fluid rounded w-100" alt="g2realty guru">
-                                <h5 class="mt-3">Guru Gill, Licensee/Principle</h5>
-                                <p class="mt-2">
-                                    With a Master’s degree in Business Management and over six years of hands-on
-                                    experience in
-                                    property management and real
-                                    estate sales, Guru Gill serves as the Director and Licensee of <strong>G2
-                                        REALTY</strong>. His
-                                    passion lies in connecting people with the
-                                    right property opportunities—whether it's buying a first home, investing in real
-                                    estate, or
-                                    managing assets effectively.
-                                </p>
-                                <p>
-                                    Guru brings a strategic mindset, a people-first approach, and deep industry
-                                    knowledge to deliver
-                                    tailored,
-                                    results-driven property solutions. Known for his straightforward and practical
-                                    approach to
-                                    problem-solving, he
-                                    consistently identifies the best path forward and ensures clients feel supported
-                                    throughout the
-                                    property journey.
-                                </p>
-                                <p>
-                                    Highly respected as a portfolio manager, Guru is praised for his commitment to
-                                    day-to-day
-                                    property care, while also
-                                    focusing on maximising returns and long-term capital growth for his clients.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="bg-white rounded p-4 h-100">
-                        <div class="row g-4 justify-content-center">
-
-                            <div class="col-12">
-                                <img src="img/jagdeep.png" class="img-fluid rounded w-100" alt="g2realty">
-                                <h5 class="mt-3">Jagdeep Singh, Director</h5>
-                                <p class="mt-2">
-                                    With a strong foundation in customer service and a full real estate licence, Jagdeep
-                                    brings
-                                    energy, reliability, and
-                                    excellence to his role in Trust Accounting at G2 REALTY. His ability to connect with
-                                    a diverse
-                                    range of clients and
-                                    deliver consistent, high-quality service makes him a valued asset in both property
-                                    management
-                                    and rental operations.
-                                </p>
-                                <p>
-                                    Jagdeep’s background in sales, combined with his attention to detail and passion for
-                                    property,
-                                    ensures every transaction
-                                    is handled with precision and care. His client-first approach and commitment to
-                                    service
-                                    excellence set a high standard
-                                    across all aspects of the rental process.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <div class="container py-2">
+        <div class="container py-5">
             <div class="row">
                 <div class="col-12 mb-4 wow fadeInLeft" data-wow-delay="0.2s">
                     <h4 class="text-primary text-center">Our Promise</h4>
@@ -511,224 +430,12 @@
                 </div>
                 </div>
                 
-                <!-- <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <h4 class="text-primary">What Sets Us Apart</h4>
-                <h1 class="display-4 mb-4">Secure Your Future with the Right Home</h1>
-                <p class="mb-0">At Fron Wealth, we provide expert, buyer-focused real estate services designed just for
-                    you.
-                    We offer personalized guidance, in-depth market insights, and full support to help you find the
-                    right
-                    property—faster,
-                    easier, and stress-free.
-                </p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-house-user fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Buyer-First Approach</h4>
-                        <p class="mb-4">We represent your best interests—not the seller’s.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-cubes fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Personalized Matching</h4>
-                        <p class="mb-4">We find homes that fit your goals, budget, and lifestyle.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-bullseye fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Local Market Expertise</h4>
-                        <p class="mb-4">We know the area, trends, and hidden gems.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-comment-dollar fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Skilled Negotiation</h4>
-                        <p class="mb-4">We secure the best deal, saving you money and stress.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mt-3">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="far fa-handshake fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">End-to-End Support on Purchase</h4>
-                        <p class="mb-4">From search to settlement, we guide you through every step.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-store fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Access to Off-Market Properties</h4>
-                        <p class="mb-4">Gain exclusive access to properties not listed publicly.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-comments fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Transparent Communication</h4>
-                        <p class="mb-4">You’ll always know where you stand—clear updates and honest advice.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="feature-item p-4 pt-0">
-                        <div class="feature-icon p-4 mb-4">
-                            <i class="fa fa-clock fa-3x"></i>
-                        </div>
-                        <h4 class="mb-4">Time-Saving Process Every Step of the Way</h4>
-                        <p class="mb-4">We streamline your home search to save you time and hassle.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mt-4 wow fadeInUp" data-wow-delay="1s">
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="service.html">Read More</a>
-                </div>
-            </div>
-        </div>
-        </div>
-    Feature End -->
-
-        <!-- Service Start -->
-        <div class="container-fluid  py-5 bg-white">
-            <div class="container service pb-5">
-                <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Services</h4>
-                    <h1 class="display-4 mb-4">We Provide Best Services</h1>
-                    <p class="mb-0">At G2 REALTY, we provide comprehensive real estate services tailored to your unique
-                        needs.
-                        Whether you're buying your first home, investing, or managing assets, we guide you every step.
-                        Our expert team delivers personalized solutions to maximize value and simplify the property
-                        journey.
-                        </p>
-                        </div>
-                <div class="owl-carousel services-carousel wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/buy.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3">
-                                <i class="fa fa-users fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <span class="d-inline-block h4 mb-4">Property Listing & Marketing</span>
-                                <p class="mb-4">We showcase your property with smart listings and marketing
-                                    to get
-                                    the
-                                    best results.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/sale.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <span class="d-inline-block h4 mb-4">Professional Photography & Virtual
-                                    Tours</span>
-                                <p class="mb-4">High-quality photos and virtual tours to present your
-                                    property at
-                                    its
-                                    best.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/market.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3">
-                                <i class="fa fa-chart-line fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <span class="d-inline-block h4 mb-4">Comparative Market Analysis
-                                    (CMA)</span>
-                                <p class="mb-4">Accurate property pricing through detailed Comparative
-                                    Market
-                                    Analysis
-                                    (CMA).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/legal.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3">
-                                <i class="fa fa-address-book fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <span class="d-inline-block h4 mb-4">Buyer Screening & Negotiation</span>
-                                <p class="mb-4">We carefully screen buyers and handle negotiations to get
-                                    you the
-                                    best
-                                    deal.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/endtoend.jpg" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3">
-                                <i class="fa fa-address-book fa-2x"></i>
-                            </div>
-                        </div>
-                        <div class="service-content p-4">
-                            <div class="service-content-inner">
-                                <span class="d-inline-block h4 mb-4">End-to-End Sales Support</span>
-                                <p class="mb-4">Complete support throughout the sales process, from listing
-                                    to
-                                    closing.</p>
-                            </div>
-                        </div>
-                        </div>
-                        
-                        </div>
-                        <div class="col-12 text-center wow fadeInUp mt-5" data-wow-delay="0.6s">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="service.html">More Services</a>
-                </div>
-                </div>
-                </div>
-                <!-- Service End -->
+            
 
         <!-- Property Deals Start -->
-        <div class="container-fluid blog py-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+        <div class="container-fluid blog pt-5 pb-4">
+            <div class="container">
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h1 class="display-4 mb-4">Properties Leassed</h1>
                 </div>
                 <div class="owl-carousel property-carousel wow fadeInUp" data-wow-delay="0.2s">
@@ -1176,118 +883,12 @@
                                         </div>
                                         <!-- Property Deals -->
                                     
-                                            <!-- Team Start -->
-        <div class="container-fluid team pt-5 ">
-            <div class="container pb-5">
-                <div class=" text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Gallery</h4>
-                    <h1 class="display-4 mb-4">Properties We Bought</h1>
-                    <p class="mb-0">Explore the properties we've helped our clients successfully acquire.
-                        Each home tells a story of trust, growth, and smart investment.
-                    </p>
-                </div>
-                <div class="row g-4 justify-content-center  wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="row g-4">
-                        <!-- Image 1 -->
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g1.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g1.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g2.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g2.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g3.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g3.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g4.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g4.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g5.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g5.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g6.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g6.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g7.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g7.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g8.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g8.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g9.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g9.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g10.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g10.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g11.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g11.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g12.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g12.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g13.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g13.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g14.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g14.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g15.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g15.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g16.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g16.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g17.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g17.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 col-md-3 col-lg-2">
-                            <a href="img/properties/g18.jpg" data-lightbox="property-gallery" data-title="Property 1">
-                                <img src="img/properties/g18.jpg" alt="Property 1" class="img-fluid gallery-img">
-                            </a>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
-                        <!-- Team End -->
+                                        
 
         <!-- Testimonial Start -->
         <div class="container-fluid testimonial py-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <div class="container">
+                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 900px;">
                     <h4 class="text-primary">Testimonial</h4>
                     <h1 class="display-4 mb-4">What Our Customers Are Saying</h1>
                     <p class="mb-0">Our clients are at the heart of everything we do.
@@ -1501,7 +1102,7 @@
                                         <h4 class="text-white mb-4">Useful Links</h4>
                                         <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
                                         <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                                        <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                                        <a href="team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
                                         <a href="propertylisting.html"><i class="fas fa-angle-right me-2"></i> Deals</a>
                                         <a href="gallery.html"><i class="fas fa-angle-right me-2"></i> Gallery</a>
                                         <a href="FAQ.html"><i class="fas fa-angle-right me-2"></i> FAQ's</a>
@@ -1597,6 +1198,54 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+<script>
+    // Handle search form submission
+    document.getElementById('submit-btn').addEventListener('click', function () {
+        const propertyType = document.querySelector('input[name="property-type"]:checked').value;
+        const address = document.getElementById('address').value.trim();
+
+        // Validate address
+        if (!address) {
+            alert('Please enter an address.');
+            return;
+        }
+
+        // Extract city from address (before the comma)
+        const city = address.split(',')[0].trim();
+
+        // Prefill modal form fields
+        document.getElementById('city').value = city;
+        document.getElementById('subject').value = address;
+        document.getElementById(propertyType === 'Sale' ? 'sale-appraisal' : 'rent-appraisal').checked = true;
+
+        // Open modal (already triggered by data-bs-toggle and data-bs-target)
+    });
+
+    // Handle query form submission
+    document.getElementById('query-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const city = document.getElementById('city').value;
+        const appraisal = document.querySelector('input[name="appraisal"]:checked')?.value || '';
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !appraisal) {
+            alert('Please fill in all required fields (Name, Email, and Appraisal Type).');
+            return;
+        }
+
+        // Simulate sending query
+        alert(`Query submitted!\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCity: ${city}\nAppraisal Type: ${appraisal}\nAddress: ${subject}\nMessage: ${message}`);
+
+        // Reset form and close modal
+        this.reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById('QueryForm'));
+        modal.hide();
+    });
+</script>
 </body>
 
 </html>
